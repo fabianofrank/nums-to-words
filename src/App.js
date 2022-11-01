@@ -1,15 +1,16 @@
 import React from 'react';
+import './index.css';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
-import './App.css';
+import Converter from './components/converter';
 
 const App = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" />
+      <Route path="/" element={<Converter />} />
     </Routes>
   </BrowserRouter>
 );
