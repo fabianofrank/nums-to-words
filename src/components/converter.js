@@ -9,13 +9,13 @@ const Converter = () => {
     let l = num.length;
 
     if (l === 0) {
-      result.push('empty string');
-      return;
+      const result = 'empty string';
+      return result;
     }
 
     if (l > 4) {
-      result.push('Length more than 4 is not supported');
-      return;
+      const result = 'Length more than 4 is not supported';
+      return result;
     }
 
     const singleDigits = ['zero', 'one', 'two', 'three',
@@ -34,8 +34,8 @@ const Converter = () => {
     const tensPower = ['hundred', 'thousand'];
 
     if (l === 1) {
-      result.push(singleDigits[num.charCodeAt(0) - 48]);
-      return;
+      const result = singleDigits[num.charCodeAt(0) - 48];
+      return result;
     }
 
     let x = 0;
@@ -51,13 +51,13 @@ const Converter = () => {
         if (num.charCodeAt(x) - 48 === 1) {
           const sum = (num.charCodeAt(x) - 48 + num.charCodeAt(x + 1) - 48);
           result.push(twoDigits[sum]);
-          return;
+          return result;
         }
 
         if (num.charCodeAt(x) - 48 === 2
           && num.charCodeAt(x + 1) - 48 === 0) {
           result.push('twenty');
-          return;
+          return result;
         }
 
         const i = num.charCodeAt(x) - 48;
